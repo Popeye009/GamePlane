@@ -70,6 +70,7 @@ class PlaneGame(object):
         self.hero.bullt_group.update()
         self.hero.bullt_group.draw(self.screen)
 
+    # 静态方法
     @staticmethod
     def __game_over():
         print("Game Over!")
