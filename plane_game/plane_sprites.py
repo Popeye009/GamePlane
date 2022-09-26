@@ -23,7 +23,7 @@ class GameSprite(pygame.sprite.Sprite):
 class BackGround(GameSprite):
 
     def __init__(self, is_alt=False):
-        image_name = "./images/background.png"
+        image_name = "plane_game/images/background.png"
         super().__init__(image_name)
         if is_alt:
             self.rect.y = -SCREEN_RECT.height
@@ -36,7 +36,7 @@ class BackGround(GameSprite):
 
 class Hero(GameSprite):
     def __init__(self):
-        super().__init__("./images/me1.png", 0)
+        super().__init__("plane_game/images/me1.png", 0)
         self.rect.centerx = SCREEN_RECT.centerx
         self.rect.bottom = SCREEN_RECT.bottom - 120
         self.bullt_group = pygame.sprite.Group()
@@ -58,7 +58,7 @@ class Hero(GameSprite):
 
 class Enemy(GameSprite):
     def __init__(self):
-        super().__init__("./images/enemy1.png")
+        super().__init__("plane_game/images/enemy1.png")
         self.rect.bottom = 0
         max_width = SCREEN_RECT.width - self.rect.width
         self.rect.left = random.randint(0, max_width)
@@ -72,7 +72,7 @@ class Enemy(GameSprite):
 
 class Bullet(GameSprite):
     def __init__(self):
-        super().__init__("./images/bullet1.png", -3)
+        super().__init__("plane_game/images/bullet1.png", -3)
 
     def update(self):
         super().update()

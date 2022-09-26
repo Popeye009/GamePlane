@@ -1,4 +1,4 @@
-from plane_game.plane_sprites import *
+from plane_sprites import *
 
 
 class PlaneGame(object):
@@ -46,9 +46,9 @@ class PlaneGame(object):
     def __event_handler(self):
         keys_pressed = pygame.key.get_pressed()  # 监听键盘，返回按键元组
         if keys_pressed[pygame.K_RIGHT]:
-            self.hero.speed = 2
+            self.hero.speed = 5
         elif keys_pressed[pygame.K_LEFT]:
-            self.hero.speed = -2
+            self.hero.speed = -5
         else:
             self.hero.speed = 0
         for even in pygame.event.get():
